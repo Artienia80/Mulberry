@@ -30,5 +30,11 @@ public class MBItemTagProvider extends ItemTagsProvider {
                 .add(MBItems.METEORITE_AXE.get());
         tag(ItemTags.HOES)
                 .add(MBItems.METEORITE_HOE.get());
+
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(MBItems.METEORITE_HELMET.get())
+                .add(MBItems.METEORITE_CHESTPLATE.get())
+                .add(MBItems.METEORITE_LEGGINGS.get())
+                .add(MBItems.METEORITE_BOOTS.get());
     }
 }

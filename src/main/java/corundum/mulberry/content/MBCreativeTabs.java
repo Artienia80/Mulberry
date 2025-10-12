@@ -45,6 +45,11 @@ public class MBCreativeTabs {
                                 MBItems.METEORITE_SHOVEL,
                                 MBItems.METEORITE_HOE,
 
+                                MBItems.METEORITE_HELMET,
+                                MBItems.METEORITE_CHESTPLATE,
+                                MBItems.METEORITE_LEGGINGS,
+                                MBItems.METEORITE_BOOTS,
+
                                 MBItems.BREEZE_POWDER
 
                         );
