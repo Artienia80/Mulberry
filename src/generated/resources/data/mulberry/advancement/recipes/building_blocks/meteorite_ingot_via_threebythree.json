@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_meteorite_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mulberry:meteorite_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mulberry:meteorite_ingot_via_threebythree"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_meteorite_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mulberry:meteorite_ingot_via_threebythree"
+    ]
+  }
+}

@@ -45,6 +45,20 @@ public class MBRecipeProvider extends RecipeProvider {
                 1
         );
 
+        threeByThree(
+                recipeOutput,
+                MBItems.METEORITE_NUGGET,
+                MBItems.METEORITE_INGOT,
+                1
+        );
+
+        one(
+                recipeOutput,
+                MBItems.METEORITE_INGOT,
+                MBItems.METEORITE_NUGGET,
+                9
+        );
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MBItems.IRON_PLATE, 1)
                 .define('X', Items.IRON_INGOT)
                 .pattern("XX")

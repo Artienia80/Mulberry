@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#mulberry:needs_meteorite_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_diamond_tool"
+  ]
+}

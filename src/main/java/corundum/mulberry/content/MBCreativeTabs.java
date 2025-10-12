@@ -31,6 +31,7 @@ public class MBCreativeTabs {
                                 MBBlocks.METEORITE_SLAG_BLOCK,
 
                                 MBItems.METEORITE_INGOT,
+                                MBItems.METEORITE_NUGGET,
                                 MBItems.METEORITE_SLAG,
                                 MBItems.METEORITE_PLATE,
 

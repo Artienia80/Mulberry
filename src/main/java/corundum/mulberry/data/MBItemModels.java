@@ -28,6 +28,8 @@ public class MBItemModels extends ItemModelProvider {
         // Basic items
         basicItems(
                 MBItems.METEORITE_INGOT,
+                MBItems.METEORITE_NUGGET,
+
                 MBItems.METEORITE_SLAG,
                 MBItems.METEORITE_PLATE,
                 MBItems.IRON_PLATE,
