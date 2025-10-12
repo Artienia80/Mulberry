@@ -1,7 +1,7 @@
 package corundum.mulberry.content;
 
 import corundum.mulberry.Mulberry;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -42,4 +42,20 @@ public class MBItems {
             "breeze_powder",
             new Item.Properties()
     );
+
+    public static final DeferredItem<SwordItem> METEORITE_SWORD = ITEMS.register("meteorite_sword",
+            () -> new SwordItem(MBToolTiers.METEORITE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(MBToolTiers.METEORITE, 3, -2.4f))));
+    public static final DeferredItem<PickaxeItem> METEORITE_PICKAXE = ITEMS.register("meteorite_pickaxe",
+            () -> new PickaxeItem(MBToolTiers.METEORITE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(MBToolTiers.METEORITE, 1.0F, -2.8f))));
+    public static final DeferredItem<ShovelItem> METEORITE_SHOVEL = ITEMS.register("meteorite_shovel",
+            () -> new ShovelItem(MBToolTiers.METEORITE, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(MBToolTiers.METEORITE, 1.5F, -3.0f))));
+    public static final DeferredItem<AxeItem> METEORITE_AXE = ITEMS.register("meteorite_axe",
+            () -> new AxeItem(MBToolTiers.METEORITE, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(MBToolTiers.METEORITE, 5.0F, -3.0f))));
+    public static final DeferredItem<HoeItem> METEORITE_HOE = ITEMS.register("meteorite_hoe",
+            () -> new HoeItem(MBToolTiers.METEORITE, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(MBToolTiers.METEORITE, -3.0F, 0.0F))));
 }

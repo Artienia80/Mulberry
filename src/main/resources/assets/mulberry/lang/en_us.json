@@ -13,7 +13,16 @@
   "item.mulberry.steel_plate": "Steel Plate",
   "item.mulberry.electrum_plate": "Electrum Plate",
 
+  "item.mulberry.meteorite_sword": "Meteorite Sword",
+  "item.mulberry.meteorite_pickaxe": "Meteorite Pickaxe",
+  "item.mulberry.meteorite_axe": "Meteorite Axe",
+  "item.mulberry.meteorite_shovel": "Meteorite Shovel",
+  "item.mulberry.meteorite_hoe": "Meteorite Hoe",
+
+  "item.mulberry.meteorite_helmet": "Meteorite Helmet",
+  "item.mulberry.meteorite_chestplate": "Meteorite Chestplate",
+  "item.mulberry.meteorite_leggings": "Meteorite Leggings",
+  "item.mulberry.meteorite_boots": "Meteorite Boots",
+
   "item.mulberry.breeze_powder": "Breeze Powder"
-
-
 }

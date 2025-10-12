@@ -38,11 +38,13 @@ public class MBCreativeTabs {
                                 MBItems.STEEL_PLATE,
                                 MBItems.ELECTRUM_PLATE,
 
-
+                                MBItems.METEORITE_SWORD,
+                                MBItems.METEORITE_PICKAXE,
+                                MBItems.METEORITE_AXE,
+                                MBItems.METEORITE_SHOVEL,
+                                MBItems.METEORITE_HOE,
 
                                 MBItems.BREEZE_POWDER
-
-
 
                         );
                     })
