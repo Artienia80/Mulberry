@@ -1,7 +1,11 @@
-// 1.21	2025-10-08T20:38:09.8399396	Block States: mulberry
+// 1.21	2025-10-13T05:08:14.954422	Block States: mulberry
 9fc3d505249c8936b5001a17d6aa9f8ddf2f21a5 assets/mulberry/blockstates/meteorite_block.json
 4cb6fbe8c4138fc9fb7d03c45b554625628c2d33 assets/mulberry/blockstates/meteorite_rock.json
 ad13a38d8f81d29145c44d52adcae32fa2e1720c assets/mulberry/blockstates/meteorite_slag_block.json
+6581f90caaed7897e7cd7896a85f0a0590c89166 assets/mulberry/blockstates/pyrite_block.json
+a42a98ad437fea55eb6df0c5b8fc040a6c782897 assets/mulberry/blockstates/pyrite_ore.json
 cacf6a6b7e1fc4c02ccb90ec7079faee208842d1 assets/mulberry/models/block/meteorite_block.json
 b60bd2a3db3b3afa156df31a2e7354beec68da81 assets/mulberry/models/block/meteorite_rock.json
 c8dfeae6052091c4c4729d3605db624247ae62fb assets/mulberry/models/block/meteorite_slag_block.json
+08460481c0e91faa5b8b4772bf1afc83c9b91050 assets/mulberry/models/block/pyrite_block.json
+ccbc8a69a5156ae7f9e91bb78fe97cc230d1d0ef assets/mulberry/models/block/pyrite_ore.json

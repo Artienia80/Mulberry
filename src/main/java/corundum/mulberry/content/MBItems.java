@@ -27,6 +27,10 @@ public class MBItems {
             "meteorite_plate",
             new Item.Properties()
     );
+    public static final DeferredItem<Item> PYRITE = ITEMS.registerSimpleItem(
+            "pyrite",
+            new Item.Properties()
+    );
 
     public static final DeferredItem<Item> IRON_PLATE = ITEMS.registerSimpleItem(
             "iron_plate",

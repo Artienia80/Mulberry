@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "rubinated_nether"
+    }
+  ],
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "mulberry:meteorite_slag"
+  },
+  "result": {
+    "count": 1,
+    "id": "mulberry:meteorite_ingot"
+  }
+}

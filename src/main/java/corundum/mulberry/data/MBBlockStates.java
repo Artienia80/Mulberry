@@ -17,6 +17,10 @@ public class MBBlockStates extends BlockStateProvider {
         simpleBlock(MBBlocks.METEORITE_ROCK.get());
         simpleBlock(MBBlocks.METEORITE_BLOCK.get());
         simpleBlock(MBBlocks.METEORITE_SLAG_BLOCK.get());
+        simpleBlock(MBBlocks.PYRITE_ORE.get());
+        simpleBlock(MBBlocks.PYRITE_BLOCK.get());
+
+
 
     }
 }

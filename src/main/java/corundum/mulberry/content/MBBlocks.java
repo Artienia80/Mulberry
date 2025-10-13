@@ -2,6 +2,7 @@ package corundum.mulberry.content;
 
 import corundum.mulberry.Mulberry;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -39,6 +40,20 @@ public class MBBlocks {
                             .mapColor(MapColor.STONE)
                             .requiresCorrectToolForDrops()
                             .strength(3.0F, 6.0F)
+            )
+    );
+
+    public static final DeferredBlock<Block> PYRITE_ORE = registerBlockAndItem(
+            "pyrite_ore",
+            () -> new Block(
+                    Block.Properties.ofFullCopy(Blocks.IRON_ORE)
+            )
+    );
+
+    public static final DeferredBlock<Block> PYRITE_BLOCK = registerBlockAndItem(
+            "pyrite_block",
+            () -> new Block(
+                    Block.Properties.ofFullCopy(Blocks.IRON_BLOCK)
             )
     );
 

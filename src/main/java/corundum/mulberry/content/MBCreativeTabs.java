@@ -50,6 +50,11 @@ public class MBCreativeTabs {
                                 MBItems.METEORITE_LEGGINGS,
                                 MBItems.METEORITE_BOOTS,
 
+                                MBBlocks.PYRITE_ORE,
+                                MBItems.PYRITE,
+                                MBBlocks.PYRITE_BLOCK,
+
+
                                 MBItems.BREEZE_POWDER
 
                         );

@@ -2,6 +2,7 @@
   "values": [
     "mulberry:meteorite_rock",
     "mulberry:meteorite_block",
-    "mulberry:meteorite_slag_block"
+    "mulberry:meteorite_slag_block",
+    "mulberry:pyrite_ore"
   ]
 }

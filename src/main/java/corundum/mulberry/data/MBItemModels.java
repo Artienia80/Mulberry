@@ -44,7 +44,11 @@ public class MBItemModels extends ItemModelProvider {
         simpleBlockItems(
                 MBBlocks.METEORITE_ROCK,
                 MBBlocks.METEORITE_BLOCK,
-                MBBlocks.METEORITE_SLAG_BLOCK
+                MBBlocks.METEORITE_SLAG_BLOCK,
+                MBBlocks.PYRITE_ORE,
+                MBBlocks.PYRITE_BLOCK
+
+
         );
 
         // Basic items
@@ -57,6 +61,9 @@ public class MBItemModels extends ItemModelProvider {
                 MBItems.IRON_PLATE,
                 MBItems.STEEL_PLATE,
                 MBItems.ELECTRUM_PLATE,
+
+                MBItems.PYRITE,
+
 
                 MBItems.BREEZE_POWDER
         );

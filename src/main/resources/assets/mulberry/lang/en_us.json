@@ -4,7 +4,11 @@
   "block.mulberry.meteorite_rock": "Meteorite Rock",
   "block.mulberry.meteorite_block": "Block of Meteorite",
   "block.mulberry.meteorite_slag_block": "Block of Meteorite Slag",
+  "block.mulberry.pyrite_ore": "Pyrite Ore",
+  "block.mulberry.pyrite": "Block of Pyrite",
 
+
+  "item.mulberry.pyrite": "Pyrite",
   "item.mulberry.meteorite_ingot": "Meteorite Ingot",
   "item.mulberry.meteorite_nugget": "Meteorite Nugget",
   "item.mulberry.meteorite_slag": "Meteorite Slag",

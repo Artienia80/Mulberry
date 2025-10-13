@@ -1,5 +1,6 @@
-// 1.21	2025-10-12T05:09:08.3357946	Tags for minecraft:block mod id mulberry
-7a5ac5ba399c24125a67bd067d93894bfea2310c data/minecraft/tags/block/mineable/pickaxe.json
+// 1.21	2025-10-13T05:08:14.9434679	Tags for minecraft:block mod id mulberry
+f28418ac391e6f061d5be7a20e48375b8635fc97 data/minecraft/tags/block/mineable/pickaxe.json
 7a5ac5ba399c24125a67bd067d93894bfea2310c data/minecraft/tags/block/needs_iron_tool.json
+b170cfca6072674d235cfc188a715bd22c6d3c3e data/minecraft/tags/block/needs_stone_tool.json
 165ae6453a2d8bece1ad3033b6b2d7d727eed479 data/mulberry/tags/block/incorrect_for_meteorite_tool.json
 a249c46329a41538f49a564e1f14338aaf1be5a0 data/mulberry/tags/block/needs_meteorite_tool.json

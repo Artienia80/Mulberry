@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mulberry:block/pyrite_ore"
+    }
+  }
+}

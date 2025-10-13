@@ -1,5 +1,6 @@
 package corundum.mulberry;
 
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import com.google.common.collect.ImmutableList;
 import com.mojang.logging.LogUtils;
@@ -52,5 +53,9 @@ public class Mulberry {
         static void onClientSetup(FMLClientSetupEvent event) {
             LOGGER.info("Mull these berries lmao");
         }
+    }
+
+    public static ResourceLocation asResource(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
 }

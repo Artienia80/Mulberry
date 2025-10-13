@@ -3,15 +3,14 @@
   "category": "building",
   "key": {
     "I": {
-      "item": "mulberry:meteorite_ingot"
+      "item": "mulberry:pyrite_block"
     }
   },
   "pattern": [
-    "II",
-    "II"
+    "I"
   ],
   "result": {
-    "count": 1,
-    "id": "mulberry:meteorite_plate"
+    "count": 9,
+    "id": "mulberry:pyrite"
   }
 }

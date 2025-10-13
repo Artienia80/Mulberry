@@ -10,8 +10,6 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.storage.loot.LootPool;
-import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 
@@ -32,6 +30,8 @@ public class MBBlockLoot extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(MBBlocks.METEORITE_BLOCK.get());
         this.dropSelf(MBBlocks.METEORITE_SLAG_BLOCK.get());
+        this.dropSelf(MBBlocks.PYRITE_BLOCK.get());
+
 
         this.add(
                 MBBlocks.METEORITE_ROCK.get(),
@@ -40,6 +40,24 @@ public class MBBlockLoot extends BlockLootSubProvider {
                         applyExplosionDecay(
                                 block,
                                 LootItem.lootTableItem(MBItems.METEORITE_SLAG)
+                                        .apply(
+                                                ApplyBonusCount.addOreBonusCount(
+                                                        registries
+                                                                .lookupOrThrow(Registries.ENCHANTMENT)
+                                                                .getOrThrow(Enchantments.FORTUNE)
+                                                )
+                                        )
+                        )
+                )
+        );
+
+        this.add(
+                MBBlocks.PYRITE_ORE.get(),
+                (block) -> createSilkTouchDispatchTable(
+                        block,
+                        applyExplosionDecay(
+                                block,
+                                LootItem.lootTableItem(MBItems.PYRITE)
                                         .apply(
                                                 ApplyBonusCount.addOreBonusCount(
                                                         registries

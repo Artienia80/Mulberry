@@ -22,7 +22,13 @@ public class MBBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(MBBlocks.METEORITE_ROCK.get())
                 .add(MBBlocks.METEORITE_BLOCK.get())
-                .add(MBBlocks.METEORITE_SLAG_BLOCK.get());
+                .add(MBBlocks.METEORITE_SLAG_BLOCK.get())
+                .add(MBBlocks.PYRITE_ORE.get());
+
+        tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(MBBlocks.PYRITE_ORE.get())
+                .add(MBBlocks.PYRITE_BLOCK.get());
+
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(MBBlocks.METEORITE_ROCK.get())
