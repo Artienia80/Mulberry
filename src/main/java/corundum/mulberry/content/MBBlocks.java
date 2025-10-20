@@ -3,6 +3,7 @@ package corundum.mulberry.content;
 import corundum.mulberry.Mulberry;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -56,6 +57,12 @@ public class MBBlocks {
                     Block.Properties.ofFullCopy(Blocks.IRON_BLOCK)
             )
     );
+
+    public static final DeferredBlock<SticksBlock> STICKS = BLOCKS.register("sticks",
+            () -> new SticksBlock(BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.WOOD)));
 
     public static <T extends Block> DeferredBlock<T> registerBlockAndItem(String name, Supplier<T> block) {
         var register = BLOCKS.register(name, block);

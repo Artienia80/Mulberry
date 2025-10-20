@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "sticks=1": {
+      "model": "mulberry:block/sticks_1"
+    },
+    "sticks=2": {
+      "model": "mulberry:block/sticks_2"
+    },
+    "sticks=3": {
+      "model": "mulberry:block/sticks_3"
+    }
+  }
+}

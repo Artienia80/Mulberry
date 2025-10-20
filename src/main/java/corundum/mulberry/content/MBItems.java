@@ -52,6 +52,9 @@ public class MBItems {
             new Item.Properties()
     );
 
+    public static final DeferredItem<PlaceableSticksItem> STICK = ITEMS.register("stick",
+            () -> new PlaceableSticksItem(new Item.Properties()));
+
     public static final DeferredItem<SwordItem> METEORITE_SWORD = ITEMS.register("meteorite_sword",
             () -> new SwordItem(MBToolTiers.METEORITE, new Item.Properties()
                     .attributes(SwordItem.createAttributes(MBToolTiers.METEORITE, 3, -2.4f))));

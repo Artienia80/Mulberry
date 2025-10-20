@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "corundum.mulberry.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "mulberry.refmap.json",
+  "mixins": [
+    "StickItemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

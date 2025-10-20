@@ -1,6 +1,7 @@
-// 1.21	2025-10-13T05:08:14.9479556	Loot Tables
+// 1.21	2025-10-21T00:34:46.9068097	Loot Tables
 4c9e1b7becccbaae4d7a56d982fb28d674b149f9 data/mulberry/loot_table/blocks/meteorite_block.json
 d54431eb34222c947d1b8e922977f06e36d71399 data/mulberry/loot_table/blocks/meteorite_rock.json
 396dcebb2795e16ba23d67493881604b6a13fad8 data/mulberry/loot_table/blocks/meteorite_slag_block.json
 de23579d3db041cdcf56f59c1c9c1a4498fb5493 data/mulberry/loot_table/blocks/pyrite_block.json
 82a89509e141646fe46228a829adf4327c3bb9d2 data/mulberry/loot_table/blocks/pyrite_ore.json
+0a71cfcd91459d28a6e434aa8b2812aed2de1087 data/mulberry/loot_table/blocks/sticks.json
