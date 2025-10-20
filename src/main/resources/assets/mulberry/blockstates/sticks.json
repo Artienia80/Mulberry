@@ -44,6 +44,21 @@
     "facing=east,sticks=3": {
       "model": "mulberry:block/sticks_3",
       "y": 270
+    },
+    "facing=north,sticks=4": {
+      "model": "mulberry:block/sticks_4",
+      "y": 180
+    },
+    "facing=south,sticks=4": {
+      "model": "mulberry:block/sticks_4"
+    },
+    "facing=west,sticks=4": {
+      "model": "mulberry:block/sticks_4",
+      "y": 90
+    },
+    "facing=east,sticks=4": {
+      "model": "mulberry:block/sticks_4",
+      "y": 270
     }
   }
 }

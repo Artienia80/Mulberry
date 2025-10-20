@@ -5,6 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -31,13 +32,14 @@ import java.util.List;
 
 public class SticksBlock extends Block {
     public static final MapCodec<SticksBlock> CODEC = simpleCodec(SticksBlock::new);
-    public static final IntegerProperty STICKS = IntegerProperty.create("sticks", 1, 3);
+    public static final IntegerProperty STICKS = IntegerProperty.create("sticks", 1, 4);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     // Use full-width hitboxes like campfire so rotation doesn't matter
     protected static final VoxelShape ONE_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 4.0, 16.0);
     protected static final VoxelShape TWO_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 4.0, 16.0);
     protected static final VoxelShape THREE_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 7.0, 16.0);
+    protected static final VoxelShape FOUR_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 7.0, 16.0);
 
     public SticksBlock(Properties properties) {
         super(properties);
@@ -65,10 +67,10 @@ public class SticksBlock extends Block {
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if (stack.is(Items.STICK) && state.getValue(STICKS) < 3) {
+        if (stack.is(Items.STICK) && state.getValue(STICKS) < 4) {
             if (!level.isClientSide) {
                 int currentSticks = state.getValue(STICKS);
-                if (currentSticks < 3) {
+                if (currentSticks < 4) {
                     level.setBlock(pos, state.setValue(STICKS, currentSticks + 1), 3);
                     level.playSound(null, pos, SoundEvents.WOOD_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
                     if (!player.getAbilities().instabuild) {
@@ -77,9 +79,8 @@ public class SticksBlock extends Block {
                 }
             }
             return ItemInteractionResult.sidedSuccess(level.isClientSide);
-        } else if (stack.is(Items.STICK) && state.getValue(STICKS) == 3) {
+        } else if (stack.is(ItemTags.COALS) && state.getValue(STICKS) == 4) {
             if (!level.isClientSide) {
-                // Create campfire with the same facing direction
                 BlockState campfireState = Blocks.CAMPFIRE.defaultBlockState()
                         .setValue(BlockStateProperties.LIT, false)
                         .setValue(BlockStateProperties.HORIZONTAL_FACING, state.getValue(FACING));
@@ -112,7 +113,8 @@ public class SticksBlock extends Block {
         return switch (state.getValue(STICKS)) {
             case 1 -> ONE_AABB;
             case 2 -> TWO_AABB;
-            default -> THREE_AABB;
+            case 3 -> THREE_AABB;
+            default -> FOUR_AABB;
         };
     }
 
@@ -121,7 +123,8 @@ public class SticksBlock extends Block {
         return switch (state.getValue(STICKS)) {
             case 1 -> ONE_AABB;
             case 2 -> TWO_AABB;
-            default -> THREE_AABB;
+            case 3 -> THREE_AABB;
+            default -> FOUR_AABB;
         };
     }
 
