@@ -13,6 +13,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -45,7 +46,12 @@ public class StickItemMixin {
 
                 if (level.getBlockState(placePos).isAir()) {
                     if (!level.isClientSide) {
-                        level.setBlock(placePos, MBBlocks.STICKS.get().defaultBlockState(), 3);
+                        // Set the facing direction based on player's horizontal facing
+                        Direction facing = context.getHorizontalDirection();
+                        BlockState newState = MBBlocks.STICKS.get().defaultBlockState()
+                                .setValue(BlockStateProperties.HORIZONTAL_FACING, facing);
+
+                        level.setBlock(placePos, newState, 3);
                         level.playSound(null, placePos, SoundEvents.WOOD_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
 
                         if (!context.getPlayer().getAbilities().instabuild) {

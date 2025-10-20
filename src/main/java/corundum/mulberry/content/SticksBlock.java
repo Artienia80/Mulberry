@@ -10,6 +10,7 @@ import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -19,31 +20,41 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import java.util.Collections;
 import java.util.List;
 
 public class SticksBlock extends Block {
     public static final MapCodec<SticksBlock> CODEC = simpleCodec(SticksBlock::new);
     public static final IntegerProperty STICKS = IntegerProperty.create("sticks", 1, 3);
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    protected static final VoxelShape ONE_AABB = Block.box(1.0, 0.0, 0.0, 5.0, 4.0, 16.0);
-    protected static final VoxelShape TWO_AABB = Block.box(1.0, 0.0, 0.0, 15.0, 4.0, 16.0);
+    // Use full-width hitboxes like campfire so rotation doesn't matter
+    protected static final VoxelShape ONE_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 4.0, 16.0);
+    protected static final VoxelShape TWO_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 4.0, 16.0);
     protected static final VoxelShape THREE_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 7.0, 16.0);
 
     public SticksBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(STICKS, 1));
+        this.registerDefaultState(this.stateDefinition.any()
+                .setValue(STICKS, 1)
+                .setValue(FACING, Direction.NORTH));
     }
 
     @Override
     protected MapCodec<? extends SticksBlock> codec() {
         return CODEC;
+    }
+
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        return this.defaultBlockState()
+                .setValue(FACING, context.getHorizontalDirection());
     }
 
     @Override
@@ -68,7 +79,11 @@ public class SticksBlock extends Block {
             return ItemInteractionResult.sidedSuccess(level.isClientSide);
         } else if (stack.is(Items.STICK) && state.getValue(STICKS) == 3) {
             if (!level.isClientSide) {
-                level.setBlock(pos, Blocks.CAMPFIRE.defaultBlockState().setValue(BlockStateProperties.LIT, false), 3);
+                // Create campfire with the same facing direction
+                BlockState campfireState = Blocks.CAMPFIRE.defaultBlockState()
+                        .setValue(BlockStateProperties.LIT, false)
+                        .setValue(BlockStateProperties.HORIZONTAL_FACING, state.getValue(FACING));
+                level.setBlock(pos, campfireState, 3);
                 level.playSound(null, pos, SoundEvents.WOOD_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
                 if (!player.getAbilities().instabuild) {
                     stack.shrink(1);
@@ -112,6 +127,6 @@ public class SticksBlock extends Block {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(STICKS);
+        builder.add(STICKS, FACING);
     }
 }

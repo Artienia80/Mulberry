@@ -1,13 +1,49 @@
 {
   "variants": {
-    "sticks=1": {
+    "facing=north,sticks=1": {
+      "model": "mulberry:block/sticks_1",
+      "y": 180
+    },
+    "facing=south,sticks=1": {
       "model": "mulberry:block/sticks_1"
     },
-    "sticks=2": {
+    "facing=west,sticks=1": {
+      "model": "mulberry:block/sticks_1",
+      "y": 90
+    },
+    "facing=east,sticks=1": {
+      "model": "mulberry:block/sticks_1",
+      "y": 270
+    },
+    "facing=north,sticks=2": {
+      "model": "mulberry:block/sticks_2",
+      "y": 180
+    },
+    "facing=south,sticks=2": {
       "model": "mulberry:block/sticks_2"
     },
-    "sticks=3": {
+    "facing=west,sticks=2": {
+      "model": "mulberry:block/sticks_2",
+      "y": 90
+    },
+    "facing=east,sticks=2": {
+      "model": "mulberry:block/sticks_2",
+      "y": 270
+    },
+    "facing=north,sticks=3": {
+      "model": "mulberry:block/sticks_3",
+      "y": 180
+    },
+    "facing=south,sticks=3": {
       "model": "mulberry:block/sticks_3"
+    },
+    "facing=west,sticks=3": {
+      "model": "mulberry:block/sticks_3",
+      "y": 90
+    },
+    "facing=east,sticks=3": {
+      "model": "mulberry:block/sticks_3",
+      "y": 270
     }
   }
 }
