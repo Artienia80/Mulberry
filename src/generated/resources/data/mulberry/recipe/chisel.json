@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "O": {
+      "tag": "mulberry:chisel_repair_item"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "O",
+    "X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mulberry:chisel"
+  }
+}

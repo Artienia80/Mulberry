@@ -74,7 +74,9 @@ public class MBItemModels extends ItemModelProvider {
                 MBItems.METEORITE_PICKAXE,
                 MBItems.METEORITE_AXE,
                 MBItems.METEORITE_SHOVEL,
-                MBItems.METEORITE_HOE
+                MBItems.METEORITE_HOE,
+                MBItems.CHISEL
+
         );
 
         trimmedArmorItem(MBItems.METEORITE_HELMET);

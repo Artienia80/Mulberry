@@ -54,8 +54,10 @@ public class MBCreativeTabs {
                                 MBItems.PYRITE,
                                 MBBlocks.PYRITE_BLOCK,
 
+                                MBItems.BREEZE_POWDER,
+                                MBItems.CHISEL
 
-                                MBItems.BREEZE_POWDER
+
 
                         );
                     })

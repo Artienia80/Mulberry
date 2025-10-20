@@ -1,4 +1,4 @@
-// 1.21	2025-10-13T05:08:14.9489568	Recipes
+// 1.21	2025-10-20T21:05:03.6061642	Recipes
 97af02f4c6df0e4ff8265922ca83b663859cc535 data/minecraft/advancement/recipes/combat/chainmail_boots.json
 b809e1b44426fb6e452a95b6510bdbc48cf55676 data/minecraft/advancement/recipes/combat/chainmail_chestplate.json
 978c89f9e72894083d12037fc98b38b59d97c2cf data/minecraft/advancement/recipes/combat/chainmail_helmet.json
@@ -20,6 +20,8 @@ dcbd1255b6c67bfb04da2b397cc4e1806e638aac data/mulberry/advancement/recipes/build
 380e585eeb4a5aa841d0a536a38fd4b005cc7600 data/mulberry/advancement/recipes/building_blocks/pyrite_via_one.json
 6c220f4f2ae6ad39e9eaa41cd8a35c205fa339e2 data/mulberry/advancement/recipes/misc/iron_plate.json
 489fd7c7fa34781b1d819fa550e7136ac72d0490 data/mulberry/advancement/recipes/misc/meteorite_ingot_from_freezing_meteorite_slag.json
+d506d807066f132586e1a41cd87b471365e23b02 data/mulberry/advancement/recipes/tools/chisel.json
+34baa8fb4ee3113b2ae8f5d4da6c0a8d0070c16f data/mulberry/recipe/chisel.json
 3d85e00886c77b7aa07e4eaf55e571a090a53339 data/mulberry/recipe/iron_plate.json
 9afeda2bc349f8cca254816dae009ad6a7e22c8b data/mulberry/recipe/meteorite_block_via_threebythree.json
 2e1d35f49ae11fe674e6422d062424fef629e056 data/mulberry/recipe/meteorite_ingot_from_freezing_meteorite_slag.json

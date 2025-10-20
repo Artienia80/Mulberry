@@ -4,6 +4,7 @@ import java.util.concurrent.CompletableFuture;
 import corundum.mulberry.Mulberry;
 import corundum.mulberry.content.MBBlocks;
 import corundum.mulberry.content.MBItems;
+import corundum.mulberry.content.MBTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -147,6 +148,14 @@ public class MBRecipeProvider extends RecipeProvider {
                 .pattern("X X")
                 .unlockedBy(getHasName(Items.CHAIN), has(Items.CHAIN))
                 .unlockedBy(getHasName(Items.CHAINMAIL_BOOTS), has(Items.CHAINMAIL_BOOTS))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, MBItems.CHISEL, 1)
+                .define('X', Items.STICK)
+                .define('O', MBTags.Items.CHISEL_REPAIR_ITEM)
+                .pattern("O")
+                .pattern("X")
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(recipeOutput);
 
     }

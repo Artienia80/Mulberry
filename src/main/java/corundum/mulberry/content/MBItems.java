@@ -80,4 +80,8 @@ public class MBItems {
     public static final DeferredItem<ArmorItem> METEORITE_BOOTS = ITEMS.register("meteorite_boots",
             () -> new ArmorItem(MBArmorMaterials.METEORITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(33))));
+
+    public static final DeferredItem<ChiselItem> CHISEL = ITEMS.register("chisel",
+            () -> new ChiselItem(MBToolTiers.CHISEL, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(MBToolTiers.CHISEL, 0.1F, -2.8f))));
 }

@@ -2,9 +2,11 @@ package corundum.mulberry.data;
 
 import corundum.mulberry.Mulberry;
 import corundum.mulberry.content.MBItems;
+import corundum.mulberry.content.MBTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -36,5 +38,7 @@ public class MBItemTagProvider extends ItemTagsProvider {
                 .add(MBItems.METEORITE_CHESTPLATE.get())
                 .add(MBItems.METEORITE_LEGGINGS.get())
                 .add(MBItems.METEORITE_BOOTS.get());
+
+        tag(MBTags.Items.CHISEL_REPAIR_ITEM);
     }
 }

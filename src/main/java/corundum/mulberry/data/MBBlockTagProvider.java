@@ -41,5 +41,6 @@ public class MBBlockTagProvider extends BlockTagsProvider {
         tag(MBTags.Blocks.INCORRECT_FOR_METEORITE_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
                 .remove(MBTags.Blocks.NEEDS_METEORITE_TOOL);
+
     }
 }
